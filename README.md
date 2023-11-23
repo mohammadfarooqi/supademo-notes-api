@@ -79,7 +79,6 @@ GET http://supademo-demo-api.keenver.com/api/v1
 - Create necessary indexes in database, such as on date.
 - Replace authentication with oAuth.
 - Implement Rate Limiting to revent abuse.
-- Add support for API versioning, ie v1/v2 etc.
 - Implement API Documentation using Swagger or something similar.
 - Add unit and integration testing.
 
