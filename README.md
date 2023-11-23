@@ -10,6 +10,9 @@ The Supademo Notes API is part of a Notes API backend service. It is responsible
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Configuration](#configuration)
+- [Database](#database)
+  - [Migrations](#migrations)
+  - [Seeding](#seeding)
 - [Test Url](#test-url)
 - [TODO: Improvements](#todo-improvements)
 - [Usage](#usage)
@@ -20,15 +23,12 @@ The Supademo Notes API is part of a Notes API backend service. It is responsible
   - [Getting Note By Id](#getting-note-by-id)
   - [Updating a Note](#updating-a-note)
   - [Deleting a Note](#deleting-a-note)
-- [Database](#database)
-  - [Migrations](#migrations)
-  - [Seeding](#seeding)
 
 ## Getting Started
 
 ### Prerequisites
 
-Before you can run this microservice, ensure you have the following software installed:
+Before you can run this backend, ensure you have the following software installed:
 
 - [Node.js](https://nodejs.org/)
 - [npm](https://www.npmjs.com/) (Node Package Manager)
@@ -61,6 +61,24 @@ Before you can run this microservice, ensure you have the following software ins
    npm run knex:mg:latest
    npm run knex:sd:run
    ```
+
+## Database
+
+### Migrations
+
+Database migrations are managed using [Knex.js](http://knexjs.org/). Run the following commands to apply migrations and create the necessary database tables:
+
+```shell
+npm run knex:mg:latest
+```
+
+### Seeding
+
+Seed data can be loaded into the database using the following command:
+
+```shell
+npm run knex:sd:run
+```
 
 ## Test Url
 
@@ -219,22 +237,4 @@ DELETE /api/v1/notes/11
 ```shell
 curl --location --request DELETE 'localhost:8080/api/v1/notes/11' \
 --header 'Authorization: <token>'
-```
-
-## Database
-
-### Migrations
-
-Database migrations are managed using [Knex.js](http://knexjs.org/). Run the following commands to apply migrations and create the necessary database tables:
-
-```shell
-npm run knex:mg:latest
-```
-
-### Seeding
-
-Seed data can be loaded into the database using the following command:
-
-```shell
-npm run knex:sd:run
 ```
