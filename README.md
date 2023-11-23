@@ -13,6 +13,8 @@ The Supademo Notes API is part of a Notes API backend service. It is responsible
 - [Test Url](#test-url)
 - [TODO: Improvements](#todo-improvements)
 - [Usage](#usage)
+  - [Creating a User](#creating-a-user)
+  - [Login as a User](#login-as-a-user)
   - [Creating a Note](#creating-a-note)
   - [Getting All Notes](#getting-all-notes)
   - [Getting Note By Id](#getting-note-by-id)
@@ -67,7 +69,7 @@ To test the apis without running and configuring the application locally, you ca
 **For REST API:**
 
 ```http
-GET https://supademo-demo-api.keenver.com/api/v1
+GET http://supademo-demo-api.keenver.com/api/v1
 ```
 
 ## TODO: Improvements
@@ -82,6 +84,48 @@ GET https://supademo-demo-api.keenver.com/api/v1
 - Add unit and integration testing.
 
 ## Usage
+
+### Creating a User
+
+To create a new User, make a `POST` request to the `/api/v1/users/register` endpoint with the required user data.
+
+**Example:**
+
+```http
+POST /api/v1/users/register
+```
+
+**cURL Example:**
+
+```shell
+curl --location 'localhost:8080/api/v1/users/register' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username": "emmanuelle63",
+    "password": "SuperDuper1@!"
+}'
+```
+
+### Login as a User
+
+To login as a User, make a `POST` request to the `/api/v1/users/login` endpoint with the required user data. You will in return get a JWT Token to use for notes secure endpoints.
+
+**Example:**
+
+```http
+POST /api/v1/users/login
+```
+
+**cURL Example:**
+
+```shell
+curl --location 'localhost:8080/api/v1/users/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username": "emmanuelle63",
+    "password": "SuperDuper1@!"
+}'
+```
 
 ### Creating a Note
 
