@@ -27,7 +27,7 @@ export default {
     ...base,
     connection: {
       ...base.connection,
-      ssl: { rejectUnauthorized: false },
+      // ssl: { rejectUnauthorized: false },
     },
     debug: true,
   },
@@ -35,7 +35,7 @@ export default {
     ...base,
     connection: {
       ...base.connection,
-      ssl: { rejectUnauthorized: true },
+      // ssl: { rejectUnauthorized: true },
     },
     pool: {
       min: 2,

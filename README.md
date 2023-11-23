@@ -67,7 +67,7 @@ To test the apis without running and configuring the application locally, you ca
 **For REST API:**
 
 ```http
-GET https://supademo-demo-api.keenver.com/api
+GET https://supademo-demo-api.keenver.com/api/v1
 ```
 
 ## TODO: Improvements

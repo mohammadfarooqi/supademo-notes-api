@@ -10,7 +10,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "start:prod": "npm run pm2:stop:all && ./node_modules/.bin/pm2 start src/index.js --name \"rest\"",
+    "start:prod": "npm run knex:mg:latest && npm run knex:sd:run && node src/index.js",
+    "pm2:start:prod": "npm run pm2:stop:all && ./node_modules/.bin/pm2 start src/index.js --name \"rest\"",
     "pm2:save": "./node_modules/.bin/pm2 save",
     "pm2:logs": "./node_modules/.bin/pm2 logs",
     "pm2:stop:all": "./node_modules/.bin/pm2 stop all",
