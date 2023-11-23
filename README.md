@@ -62,6 +62,12 @@ Before you can run this backend, ensure you have the following software installe
    npm run knex:sd:run
    ```
 
+4. Run the following command to run migrations, seed, and start server
+
+```shell
+npm run start:prod
+```
+
 ## Database
 
 ### Migrations
